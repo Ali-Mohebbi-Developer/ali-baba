@@ -9,9 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^6.0.2",
+    "@mui/material": "^6.1.0",
+    "@mui/x-date-pickers": "^7.16.0",
+    "bootstrap-icons": "^1.11.3",
+    "dayjs": "^1.11.13",
+    "next": "14.2.7",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.7"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "postcss": "^8",
