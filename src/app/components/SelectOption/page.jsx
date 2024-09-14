@@ -1,6 +1,7 @@
 "use client";
+
 import { Box, Button, Icon, List, ListItem } from "@mui/material";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { styled } from "@mui/material/styles";
 import Typo from "../MuiComponents/Typo";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
@@ -36,6 +37,14 @@ const options = [
 ];
 
 const SelectOption = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <SelectOptionContent />
+    </Suspense>
+  );
+};
+
+const SelectOptionContent = () => {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -74,7 +83,6 @@ const SelectOption = () => {
           display: "flex",
           marginTop: "-89px",
           paddingTop: "10px",
-
           paddingBottom: "0px",
           paddingInline: "100px",
           backgroundColor: "white",
@@ -113,7 +121,7 @@ const SelectOption = () => {
                 className={option.icon}
                 sx={{ display: "flex", marginBottom: "0.3rem" }}
               ></Icon>
-              <Typo> {option.content}</Typo>
+              <Typo> {option.content} </Typo>
             </Button>
           </ListItem>
         ))}
