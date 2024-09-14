@@ -1,3 +1,4 @@
+"use client";
 import CustomAccordion from "@/app/components/Accordion/page";
 import Advertising from "@/app/components/Advertising/page";
 import styled from "@emotion/styled";
@@ -6,7 +7,6 @@ import {
   Button,
   FormControl,
   Icon,
-  InputLabel,
   Link,
   List,
   ListItem,

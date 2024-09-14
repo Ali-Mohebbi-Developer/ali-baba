@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { styled } from "@mui/material/styles";
 import MuiAccordion from "@mui/material/Accordion";
